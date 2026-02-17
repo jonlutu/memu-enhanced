@@ -1,0 +1,24 @@
+from memu import MemUService
+
+service = MemUService(
+    llm_profiles={
+        'default': {
+            'base_url': 'https://open.bigmodel.cn/api/paas/v4',
+            'api_key': '47a38aead2934fbf895212441324e6b8.zLwKKwsEaXpUHR2a',
+            'chat_model': 'glm-4',
+            'client_backend': 'httpx',
+            'embedding': {
+                'model': 'embedding-2'  # GLM embedding
+            }
+        }
+    }
+)
+
+result = service.memorize(
+    resource_url='text://hello world',
+    modality='conversation',
+    user={'user_id': 'test'}
+)
+
+print(f'✅ Memorized! Categories: {result["categories"]}')
+print(f'✅ Items extracted: {len(result["items"])}')

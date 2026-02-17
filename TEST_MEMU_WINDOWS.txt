@@ -1,0 +1,13 @@
+# MemU Test Script - Windows PowerShell
+
+# Step 1: Copy from VPS
+# Copy: /home/jlutu/memu-enhanced/test_memu_glm.py
+# To: C:\Users\jonlutu\memu-enhanced\test_memu_glm.py
+
+# Step 2: Run from Windows
+cd C:\Users\jonlutu\memu-enhanced
+python test_memu_glm.py
+
+# Expected output:
+# ✅ Memorized! Categories: [...]
+# ✅ Items extracted: X
